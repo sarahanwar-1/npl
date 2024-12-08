@@ -1,0 +1,23 @@
+@use 'sass:color';
+@use 'header';
+@use 'form';
+@use 'footer';
+@use 'base'; // Ensure these files are properly named and paths are accurate.
+
+// Global styles
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+#results {
+  margin-top: 20px;
+}

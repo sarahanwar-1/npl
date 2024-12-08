@@ -1,0 +1,101 @@
+// base.scss (Base SCSS file with variables, mixins, and foundational styles)
+
+// Variables for colors, typography, and spacing
+$primary-color: #007bff;
+$secondary-color: #28a745;
+$background-color: #f4f4f4;
+$text-color: #333;
+$white: #ffffff;
+$border-radius: 5px;
+
+// Font family and size
+$font-family: Arial, sans-serif;
+$base-font-size: 16px;
+$heading-font-size: 2rem;
+$paragraph-font-size: 1rem;
+
+// Spacing
+$spacing-unit: 1rem;  // Base unit for padding/margin
+$padding-small: 0.5rem;
+$padding-medium: 1rem;
+$padding-large: 2rem;
+
+// Mixin for flexible containers
+@mixin flex-center($direction: row) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $direction;
+}
+
+// Global Styles
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-family;
+  font-size: $base-font-size;
+  background-color: $background-color;
+  color: $text-color;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-family;
+  color: $primary-color;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+// Utility Classes
+.text-center {
+  text-align: center;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.hidden {
+  display: none;
+}
+
+// Button styles
+.btn {
+  display: inline-block;
+  padding: $padding-small $padding-medium;
+  border-radius: $border-radius;
+  cursor: pointer;
+  text-align: center;
+  font-size: $base-font-size;
+
+  &--primary {
+    background-color: $primary-color;
+    color: $white;
+    border: none;
+
+    // &:hover {
+    //   background-color: color.adjust($primary-color, $lightness: -10%);
+    // }
+  }
+
+  &--secondary {
+    background-color: $secondary-color;
+    color: $white;
+    border: none;
+
+    // &:hover {
+    //   background-color: color.adjust($secondary-color, $lightness: -10%);
+    // }
+  }
+}
